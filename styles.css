@@ -27,18 +27,38 @@ label{
 
 input, textarea {
     width: 100%;
+}
+
+input, textarea, .funfact {
     font-size: 18px;
     border-radius: 5px;
     border: 1px solid #cdcfcf;
     margin-top:5px;
+    margin-right: 5px;
     padding: 10px;
     color: #333;
     background-color: #f6f8f8;
 }
 
+.funfact, .fact-cover {
+  display: block;
+  padding: 40px 20px;
+  margin-bottom: 5px;
+}
+
 ul {
   padding-left: 0;
   list-style-type: none;
+}
+
+.new:after {
+  content: "New";
+  background: skyblue;
+  color: white;
+  padding: 3px 6px;
+  font-size: .7em;
+  border-radius: 3px;
+  margin-left: 5px;
 }
 
 #newRestaurantInput {
@@ -50,7 +70,7 @@ ul {
 }
 
 #helpText span {
-  display: none;
+  display: inline;
   color: green;
 }
 
@@ -76,17 +96,21 @@ p {
   height: 100px;
 }
 
-button {
+button, .fact-cover {
   background: #537d7b;
   border: none;
   border-radius: 5px;
   color: #fff;
   font-size: 15px;
-  padding: 15px 30px;
   cursor: pointer;
   text-shadow: none;
   text-transform: uppercase;
+  text-align: center;
   letter-spacing: 2px;
+}
+
+button {
+  padding: 15px 30px;
   margin-top: 15px;
 }
 
@@ -103,9 +127,6 @@ ul {
 .review {
   padding-bottom: 15px;
   padding-right: 10px;
-}
-.review, #flashMessage {
-  display: none;
 }
 
 #flashMessage {

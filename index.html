@@ -13,11 +13,17 @@
 <body>
 
   <h1><span>Yap!</span> World-Famous Restaurant Reviews</h1>
-
+  <script>
+    var html;
+  </script>
   <div class='section'>
     <h2>List of Top Restaurants</h2>
-    <input type="text" id="newRestaurantInput" placeholder="Add a new restaurant">
-    <button id="addNew">Add</button>
+    <script>
+      html =
+      '<input type="text" id="newRestaurantInput" placeholder="Add a new restaurant">' +
+      '<button id="addNew">Add</button>';
+      document.querySelectorAll('.section')[0].innerHTML = html;
+    </script>
     <p id="helpText">How are these ranked?
       <span>Good question! Our reviews are ranked using an extra super smart and scientific algorithim... don't worry about it...
       </span>
@@ -29,6 +35,23 @@
       <li>Ruby Slipper</li>
       <li>Arnaud's</li>
     </ul>
+    <br>
+    <br>
+    <h3>Fun Facts</h3>
+    <p>
+  		<span class="funfact">Doritos first appeared at Casa de Fritos at Disneyland</span>
+  	</p>
+  	<p>
+  		<span class="funfact">General Tso's Chicken was invented in New York</span>
+  	</p>
+    <script>
+      for (let element of document.querySelectorAll('.funfact')) {
+        let cover = document.createElement('span');
+        cover.textContent = 'Reveal Fun Fact';
+        cover.className = 'fact-cover';
+        element.parentElement.appendChild(cover);
+      }
+    </script>
   </div>
 
   <div class="section">
@@ -44,16 +67,24 @@
     </div>
   </div>
   <div class="section">
-    <h2>Add a Review</h2>
-    <p id="flashMessage">Write a review in the next 24 hours and receive a 10% off coupon!</p>
-
-    <label>Restaurant Title: <input type="text" id="restaurantNameInput"></label>
-    <label>Restaurant Review: <textarea id="restaurantReviewInput"></textarea></label>
-    <button id="submitBtn">Submit</button>
-
+    <script>
+      html =
+      '<h2>Add a Review</h2>' +
+      '<p id="flashMessage">Write a review in the next 24 hours and receive a 10% off coupon!</p>' +
+      '<label>Restaurant Title: <input type="text" id="restaurantNameInput"></label>' +
+      '<label>Restaurant Review: <textarea id="restaurantReviewInput"></textarea></label>' +
+      '<button id="submitBtn">Submit</button>';
+      document.querySelectorAll('.section')[2].innerHTML = html;
+    </script>
   </div>
 
   <script src="js/jquery-3.2.1.min.js"></script>
+<!--
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+-->
   <script src="js/app.js"></script>
 </body>
 </html>
