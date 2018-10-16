@@ -64,6 +64,11 @@ ul {
 #newRestaurantInput {
   width: 65%;
 }
+
+#newRestaurant p {
+  height: 102px;
+  overflow: auto;
+}
 #helpText {
   cursor: pointer;
   margin-bottom: 30px;
